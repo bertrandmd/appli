@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet mobile example</title>
+
+
+
+	<link rel="stylesheet" href="../dist/leaflet.css" />
+<link rel="stylesheet" href="../css/leaflet.awesome-markers.css">
+
+
+	<script src="../dist/leaflet.js"></script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="../plugin/leaflet.awesome-markersv2_0_1.js"></script>
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+
+
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		html, body, #map {
+			height: 100%;
+		}
+
+	</style>
+</head>
+<body><div id="map" style="width: 800px; height: 500px;"></div>
+</script>
+// Setup map
+
+var map = L.map('map').setView([51.932994,4.509373], 14);
+
+// Setup tilelayer
+L.tileLayer('http://{s}.tile.cloudmade.com/{key}/22677/256/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade. Font Awesome by Dave Gandy',
+  key: 'BC9A493B41014CAABB98F0471D759707',
+  detectRetina: true
+}).addTo(map);
+
+// Add markers to map
+// Font-Awesome markers
+L.marker([51.941196,4.512291], {icon: L.AwesomeMarkers.icon({icon: 'spinner', markerColor: 'red', prefix: 'fa', spin:true}) }).addTo(map);
+L.marker([51.927913,4.521303], {icon: L.AwesomeMarkers.icon({icon: 'coffee', markerColor: 'orange', prefix: 'fa', iconColor: 'black'}) }).addTo(map);
+L.marker([51.936063,4.502077], {icon: L.AwesomeMarkers.icon({icon: 'cog',  prefix: 'fa', markerColor: 'purple', iconColor: '#6b1d5c' }) }).addTo(map);
+</script>
+</body>
