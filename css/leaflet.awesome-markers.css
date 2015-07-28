@@ -22,7 +22,7 @@ Version: 1.0
   height: 16px;
 }
 
-/* Retina displays */
+/* Retina displays 
 @media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
 (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
  .awesome-marker {
@@ -33,7 +33,7 @@ Version: 1.0
   background-image: url('images/markers-shadow@2x.png');
   background-size: 35px 16px;
  }
-}
+}*/
 
 .awesome-marker i {
   color: #333;
