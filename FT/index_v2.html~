@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../css/L.Control.Sidebar.css">
 	<script src="../dist/leaflet.js"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<script src="../plugin/leaflet.awesome-markers.js"></script>
+<script src="../plugin/leaflet.awesome-markersv2_0_1"></script>
 	<script src="../plugin/leaflet_edgemarker/Leaflet.EdgeMarker.js"></script>
 	<script src="../plugin/L.Control.Sidebar.js"></script>
         <link rel="stylesheet" href="../plugin/leaflet_routing_machine/leaflet-routing-machine.css" />
