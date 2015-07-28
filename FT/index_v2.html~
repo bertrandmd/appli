@@ -34,7 +34,7 @@
 .menu-ui {
   background:#fff;
   position:absolute;
-  bottom:30px;left:10px;
+  bottom:35px;left:10px;
   z-index:1;
   border-radius:3px;
   width:120px;
@@ -83,7 +83,7 @@
   height:15px;
   }
 .custom-popup .leaflet-popup {
-  bottom : 40px !important;
+  bottom : 35px !important;
   }
 
 .custom-popup .leaflet-popup-tip {
@@ -448,6 +448,7 @@ trajet.on('routesfound', function(e) {
    //console.log(e.routes[0].summary); /* e.routes will be set to the routing alternatives */
 point._popup.setContent("<b>" + point.feature.properties.nom + "</b><br />" + infoDistance + "<br />" + infoTemps );
 point.openPopup();
+updateSidebar(point)
 });
 //console.log(trajet._routes);
 
@@ -504,6 +505,10 @@ var sidebar = L.control.sidebar('sidebar', {
 });
 map.addControl(sidebar);
 
+function updateSidebar(marker){
+    sidebar.show();
+    sidebar.setContent('<b>' + marker.feature.properties.nom + '</b>');
+}
 
 	</script>
 </body>
