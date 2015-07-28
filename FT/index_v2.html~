@@ -6,11 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="../dist/leaflet.css" />
-<link rel="stylesheet" href="../css/leaflet.awesome-markers.css">
-<link rel="stylesheet" href="../css/leaflet.usermarker.css">
-<link rel="stylesheet" href="../css/L.Control.Sidebar.css">
+<link rel="stylesheet" href="../css/leaflet.awesome-markers.css"/>
+<link rel="stylesheet" href="../css/leaflet.usermarker.css"/>
+<link rel="stylesheet" href="../css/L.Control.Sidebar.css"/>
 	<script src="../dist/leaflet.js"></script>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
 <script src="../plugin/leaflet.awesome-markersv2_0_1.js"></script>
 	<script src="../plugin/leaflet_edgemarker/Leaflet.EdgeMarker.js"></script>
 	<script src="../plugin/L.Control.Sidebar.js"></script>
@@ -22,7 +22,8 @@
 	<script src="../dist/turf.min.js"></script>
 	<script src="data/points.json"></script>
 <script src="http://code.jquery.com/jquery-1.11.2.js"></script>
-
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="../css/leaflet.awesome-markers.css"/>
 	<style>
 		body {
 			padding: 0;
