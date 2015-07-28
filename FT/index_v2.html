@@ -8,10 +8,12 @@
 	<link rel="stylesheet" href="../dist/leaflet.css" />
 <link rel="stylesheet" href="../css/leaflet.awesome-markers.css">
 <link rel="stylesheet" href="../css/leaflet.usermarker.css">
+<link rel="stylesheet" href="../css/L.Control.Sidebar.css">
 	<script src="../dist/leaflet.js"></script>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="../plugin/leaflet.awesome-markers.js"></script>
 	<script src="../plugin/leaflet_edgemarker/Leaflet.EdgeMarker.js"></script>
+	<script src="../plugin/L.Control.Sidebar.js"></script>
         <link rel="stylesheet" href="../plugin/leaflet_routing_machine/leaflet-routing-machine.css" />
 	<script src="../plugin/leaflet_routing_machine/leaflet-routing-machine.js"></script>
 	<!-- quoter la ligne 1952 pour supprimer l'ajout de marker-->
@@ -81,7 +83,7 @@
   height:15px;
   }
 .custom-popup .leaflet-popup {
-  bottom : 35px !important;
+  bottom : 40px !important;
   }
 
 .custom-popup .leaflet-popup-tip {
@@ -94,7 +96,9 @@
 	</style>
 </head>
 <body>
-	<div class='custom-popup' id="map"></div>
+	<div class='custom-popup' id="map"></div><div id="sidebar">
+    <h1>Sidebar 1</h1>
+</div>
 <nav id='menu-ui' class='menu-ui'></nav>
 
 	<script>
@@ -214,8 +218,9 @@ function loadData(data){
       e.layer.closePopup();
     });
 }
-var bubu = L.geoJson(toto).addTo(map);
-bubu.bindPopup('toto').openPopup();
+//var bubu = L.geoJson(toto).addTo(map);
+//bubu.bindPopup('toto').openPopup();
+
 function titi(i){
     markerGroup.addLayer(window[liste[i]]);
 }
@@ -443,6 +448,7 @@ trajet.on('routesfound', function(e) {
    //console.log(e.routes[0].summary); /* e.routes will be set to the routing alternatives */
 point._popup.setContent("<b>" + point.feature.properties.nom + "</b><br />" + infoDistance + "<br />" + infoTemps );
 point.openPopup();
+updateSidebar(point)
 });
 //console.log(trajet._routes);
 
@@ -493,6 +499,16 @@ return info._routes[0].summary.totalDistance;
 }
 
 
+var sidebar = L.control.sidebar('sidebar', {
+    closeButton: true,
+    position: 'right'
+});
+map.addControl(sidebar);
+
+function updateSidebar(marker){
+    sidebar.show();
+    sidebar.setContent('<b>' + marker.feature.properties.nom + '</b>');
+}
 
 	</script>
 </body>
