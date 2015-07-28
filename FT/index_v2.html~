@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="../dist/leaflet.css" />
 <link rel="stylesheet" href="../css/leaflet.usermarker.css"/>
 <link rel="stylesheet" href="../css/L.Control.Sidebar.css"/>
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"/>
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>-->
 <link rel="stylesheet" href="../plugin/leaflet_routing_machine/leaflet-routing-machine.css" />
 <link rel="stylesheet" href="../css/leaflet.awesome-markers.css"/>
 
