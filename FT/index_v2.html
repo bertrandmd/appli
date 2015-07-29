@@ -41,6 +41,7 @@
 <link rel="stylesheet" href="../css/L.Control.Sidebar.css"/>
 	<script src="../plugin/L.Control.Sidebar.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="../plugin/leaflet_edgemarker/Leaflet.EdgeMarker.js"></script>
 
 	<script src="../dist/turf.min.js"></script>
 	<style>
@@ -345,7 +346,7 @@ Then create the onClick function:
 //map.setView([43.575023, 3.9401], 11);
 
 
-/*
+
 // add the EdgeMarker to the map.
     L.edgeMarker({
       icon: L.icon({ // style markers
@@ -357,7 +358,7 @@ Then create the onClick function:
       //rotateIcons: true, // rotate EdgeMarkers depending on their relative position
       //layerGroup: null // you can specify a certain L.layerGroup to create the edge markers from.
     }).addTo(map);
-*/
+
 
 
 function resetPopup(marker){
@@ -513,10 +514,11 @@ updateSidebar(point)
 //console.log(trajet._routes);
 
 
-	map.setView(moi._latlng);
-	map.setZoom(13);
+	//map.setView(moi._latlng);
+	map.setView(point._latlng);
+	//map.setZoom(12);
 trajet.hide();
-
+$(".leaflet-routing-container-hide").hide()
 }
 
 /*
