@@ -27,15 +27,21 @@
 	<link rel="stylesheet" href="../dist/leaflet.css" />
 	<script src="../dist/leaflet.js"></script>
 
-
+<link rel="stylesheet" href="../css/leaflet.usermarker.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="../css/leaflet.awesome-markers.css">
 <script src="../plugin/leaflet.awesome-markers.js"></script>
+	<script src="../plugin/leaflet.usermarker.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.2.js"></script>
         <link rel="stylesheet" href="../plugin/leaflet_routing_machine/leaflet-routing-machine.css" />
 	<script src="../plugin/leaflet_routing_machine/leaflet-routing-machine.js"></script>
 	<!-- quoter la ligne 1952 pour supprimer l'ajout de marker-->
+
+<link rel="stylesheet" href="../css/L.Control.Sidebar.css"/>
+	<script src="../plugin/L.Control.Sidebar.js"></script>
+
+
 	<script src="../dist/turf.min.js"></script>
 	<style>
 		body {
@@ -399,8 +405,8 @@ L.geoJson(nearest3,{
 			//console.log(e.latlng.lat);
 			//maPosition = turf.point([e.latlng.lng,e.latlng.lat]);
 			//L.circle(e.latlng, radius).addTo(map);
-    			//var marker = L.userMarker(malatlng, {pulsing:true, accuracy:100, smallIcon:true});
-			//marker.addTo(map);
+    			var marker = L.userMarker(malatlng, {pulsing:true, accuracy:100, smallIcon:true});
+			marker.addTo(map);
 			
 			moi = L.marker(malatlng,{
 				icon: L.AwesomeMarkers.icon({
@@ -517,7 +523,7 @@ function bobba(info){
 return info._routes[0].summary.totalDistance;
 }
 
-/*
+
 var sidebar = L.control.sidebar('sidebar', {
     closeButton: true,
     position: 'right'
@@ -527,7 +533,7 @@ map.addControl(sidebar);
 function updateSidebar(marker){
     sidebar.show();
     sidebar.setContent('<b>' + marker.feature.properties.nom + '</b>');
-}*/
+}
 
 	</script>
 </body>

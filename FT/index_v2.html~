@@ -473,7 +473,7 @@ point.openPopup();
 
 
 	map.setView(moi._latlng);
-	//map.setZoom(13);
+	map.setZoom(13);
 trajet.hide();
 
 }
