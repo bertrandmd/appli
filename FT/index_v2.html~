@@ -506,7 +506,7 @@ L.geoJson(nearest3,{
 //$(document).ready(function(){
 var startcallback = function startlocate(){
 		map.locate({timeout:3000});
-);
+}
 
 function route(latO,longO,latD,longD,point){
 if (typeof trajet != 'undefined'){
@@ -587,7 +587,7 @@ map.addControl(sidebar);
 
 function updateSidebar(marker){
     sidebar.show();
-    sidebar.setContent('<b>' + marker.feature.properties.nom + '</b><img src="http://direct.itaro.com.br/blog/wp-content/uploads/2014/07/Food-Trucks-8.jpg" style="width:100%;">');
+    sidebar.setContent('<b>' + marker.feature.properties.nom + '</b><br /><br /><img src="http://direct.itaro.com.br/blog/wp-content/uploads/2014/07/Food-Trucks-8.jpg" style="width:100%;">');
 }
 
 	</script>
