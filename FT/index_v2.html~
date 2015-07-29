@@ -3,9 +3,9 @@
 <head>
 	<title>Leaflet mobile example</title>
 
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<link rel="stylesheet" href="../dist/leaflet.css" />
+	<!--<link rel="stylesheet" href="../dist/leaflet.css" />
 <link rel="stylesheet" href="../css/leaflet.awesome-markers.css">
 <link rel="stylesheet" href="../css/leaflet.usermarker.css">
 	<script src="../dist/leaflet.js"></script>
@@ -40,7 +40,7 @@
 
 <link rel="stylesheet" href="../css/L.Control.Sidebar.css"/>
 	<script src="../plugin/L.Control.Sidebar.js"></script>
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<script src="../dist/turf.min.js"></script>
 	<style>
@@ -134,6 +134,16 @@
 
 var menu = document.getElementById('menu-ui');
 
+
+$(document).ready(function(){
+    $('[class="active"]').popover({
+        placement : 'top'
+    });
+});
+
+
+
+
 var donnees =$.getJSON('data/points2.json?callback=lu0.lu_9_260_189',loadData);
 
 var liste = [];
@@ -146,6 +156,8 @@ for (jour in jours){
     var link = document.createElement('a');
         link.href = '#';	
 	link.id = jours[jour];
+	link.title="Popover title";
+	link.datacontent="Default popover";
         //link.className = jours[jour];
         link.innerHTML = jours[jour];
 
