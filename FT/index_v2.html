@@ -24,10 +24,11 @@
 	<script src="../dist/leaflet.js"></script>-->
 
 
+	<link rel="stylesheet" href="../dist/leaflet.css" />
+	<script src="../dist/leaflet.js"></script>
 
 
-
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"/>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="http://watson.lennardvoogdt.nl/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css"/>
 <script src=http://watson.lennardvoogdt.nl/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js></script>
@@ -297,6 +298,9 @@ Then create the onClick function:
 //L.circle([43.575023, 3.9401], 500).addTo(map);
 
 //map.setView([43.575023, 3.9401], 11);
+
+
+/*
 // add the EdgeMarker to the map.
     L.edgeMarker({
       icon: L.icon({ // style markers
@@ -308,6 +312,8 @@ Then create the onClick function:
       //rotateIcons: true, // rotate EdgeMarkers depending on their relative position
       //layerGroup: null // you can specify a certain L.layerGroup to create the edge markers from.
     }).addTo(map);
+*/
+
 
 function resetPopup(marker){
 marker._popup.setContent(marker.feature.properties.nom);
