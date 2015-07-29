@@ -139,10 +139,11 @@
     </div>
 
   </div>
-</div>
-	<div class='custom-popup' id="map"></div><div id="sidebar">
+</div>	<img src="http://direct.itaro.com.br/blog/wp-content/uploads/2014/07/Food-Trucks-8.jpg" style="width:100%; height:100%;">
+	<div class='custom-popup' id="map"></div>
+<div id="sidebar">
     <h1>Sidebar 1</h1>
-	<img src="http://direct.itaro.com.br/blog/wp-content/uploads/2014/07/Food-Trucks-8.jpg" style="width:100%; height:100%;">
+
 </div>
 <nav id='menu-ui' class='menu-ui'></nav>
 
@@ -489,10 +490,8 @@ L.geoJson(nearest3,{
 		//map.on('locationfound', onLocationFound);
 		map.on('locationerror', onLocationError);
 
-		//map.locate({setView: true, maxZoom: 16});
+		map.locate({setView: true, maxZoom: 16});
 
-		//
-		map.setView(moi._latlng,13);
 
 function route(latO,longO,latD,longD,point){
 if (typeof trajet != 'undefined'){
