@@ -139,7 +139,7 @@
     </div>
 
   </div>
-</div>	<img src="http://direct.itaro.com.br/blog/wp-content/uploads/2014/07/Food-Trucks-8.jpg" style="width:100%; height:100%;">
+</div>	
 	<div class='custom-popup' id="map"></div>
 <div id="sidebar">
     <h1>Sidebar 1</h1>
@@ -455,6 +455,7 @@ L.geoJson(nearest3,{
 			.openPopup()
 			.on('dragend', meMoove)
 			.addTo(map);
+			map.setView(moi._latlng,13);
 			aa()
 			window[nearestX.properties.icon].setIcon(L.AwesomeMarkers.icon({
 				icon: nearestX.properties.icon, 
@@ -476,6 +477,7 @@ L.geoJson(nearest3,{
 			.openPopup()
 			.on('dragend', meMoove)
 			.addTo(map);
+			map.setView(moi._latlng,13);
 			aa()
 			window[nearestX.properties.icon].setIcon(L.AwesomeMarkers.icon({
 					icon: nearestX.properties.icon, 
@@ -490,8 +492,8 @@ L.geoJson(nearest3,{
 		//map.on('locationfound', onLocationFound);
 		map.on('locationerror', onLocationError);
 
-		map.locate({setView: true, maxZoom: 16});
-
+		//map.locate({setView: true, maxZoom: 16});
+		map.locate();
 
 function route(latO,longO,latD,longD,point){
 if (typeof trajet != 'undefined'){
@@ -571,7 +573,7 @@ map.addControl(sidebar);
 
 function updateSidebar(marker){
     sidebar.show();
-    sidebar.setContent('<b>' + marker.feature.properties.nom + '</b>');
+    sidebar.setContent('<b>' + marker.feature.properties.nom + '</b><img src="http://direct.itaro.com.br/blog/wp-content/uploads/2014/07/Food-Trucks-8.jpg" style="width:100%;">');
 }
 
 	</script>
