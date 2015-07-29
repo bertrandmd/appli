@@ -118,7 +118,7 @@
 </head>
 <body>
 <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modalo</button>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
@@ -169,8 +169,14 @@ $(document).ready(function(){
 
 
 
+//chargement des datas avec callback
+//var donnees =$.getJSON('data/points2.json?callback=lu0.lu_9_260_189',loadData);
 
-var donnees =$.getJSON('data/points2.json?callback=lu0.lu_9_260_189',loadData);
+var donnees =$.getJSON('data/points2.json?callback=lu0.lu_9_260_189',bebCallback);
+
+function bebCallback(data){
+	loadData(data, startcallback)
+}
 
 var liste = [];
 var markerGroup = L.layerGroup([]);
@@ -247,7 +253,8 @@ function bob(fonction){
     }
 }
 
-function loadData(data){
+//rajout d'une fonction de callback qui lance la loc et le process pour laisser le temps du chargement des datas
+function loadData(data,callback){
     tutu = data;
     var tata = new L.GeoJSON(data,{//toto,{
 	pointToLayer: function (feature, latlng) {
@@ -275,6 +282,7 @@ function loadData(data){
     tata.on('mouseout', function(e) {
       e.layer.closePopup();
     });
+    callback();
 }
 //var bubu = L.geoJson(toto).addTo(map);
 //bubu.bindPopup('toto').openPopup();
@@ -493,9 +501,12 @@ L.geoJson(nearest3,{
 		map.on('locationerror', onLocationError);
 
 		//map.locate({setView: true, maxZoom: 16});
-$(document).ready(function(){
-		map.locate();
-});
+
+//temporiser le demarage
+//$(document).ready(function(){
+var startcallback = function startlocate(){
+		map.locate({timeout:3000});
+}
 
 function route(latO,longO,latD,longD,point){
 if (typeof trajet != 'undefined'){
@@ -515,6 +526,7 @@ trajet.on('routesfound', function(e) {
    //console.log(e.routes[0].summary); /* e.routes will be set to the routing alternatives */
 point._popup.setContent("<b>" + point.feature.properties.nom + "</b><br />" + infoDistance + "<br />" + infoTemps );
 point.openPopup();
+sidebar.hide();
 updateSidebar(point)
 });
 //console.log(trajet._routes);
