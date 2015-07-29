@@ -473,7 +473,7 @@ trajet.on('routesfound', function(e) {
    //console.log(e.routes[0].summary); /* e.routes will be set to the routing alternatives */
 point._popup.setContent("<b>" + point.feature.properties.nom + "</b><br />" + infoDistance + "<br />" + infoTemps );
 point.openPopup();
-//updateSidebar(point)
+updateSidebar(point)
 });
 //console.log(trajet._routes);
 
