@@ -33,6 +33,10 @@
 <link rel="stylesheet" href="http://watson.lennardvoogdt.nl/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css"/>
 <script src=http://watson.lennardvoogdt.nl/Leaflet.awesome-markers/dist/leaflet.awesome-markers.js></script>
 <script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+        <link rel="stylesheet" href="../plugin/leaflet_routing_machine/leaflet-routing-machine.css" />
+	<script src="../plugin/leaflet_routing_machine/leaflet-routing-machine.js"></script>
+	<!-- quoter la ligne 1952 pour supprimer l'ajout de marker-->
+	<script src="../dist/turf.min.js"></script>
 	<style>
 		body {
 			padding: 0;
@@ -395,8 +399,8 @@ L.geoJson(nearest3,{
 			//console.log(e.latlng.lat);
 			//maPosition = turf.point([e.latlng.lng,e.latlng.lat]);
 			//L.circle(e.latlng, radius).addTo(map);
-    			var marker = L.userMarker(malatlng, {pulsing:true, accuracy:100, smallIcon:true});
-			marker.addTo(map);
+    			//var marker = L.userMarker(malatlng, {pulsing:true, accuracy:100, smallIcon:true});
+			//marker.addTo(map);
 			
 			moi = L.marker(malatlng,{
 				icon: L.AwesomeMarkers.icon({
