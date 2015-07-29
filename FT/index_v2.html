@@ -454,6 +454,7 @@ L.geoJson(nearest3,{
 			.openPopup()
 			.on('dragend', meMoove)
 			.addTo(map);
+			map.setView(moi._latlng,13);
 			aa()
 			window[nearestX.properties.icon].setIcon(L.AwesomeMarkers.icon({
 				icon: nearestX.properties.icon, 
@@ -475,6 +476,7 @@ L.geoJson(nearest3,{
 			.openPopup()
 			.on('dragend', meMoove)
 			.addTo(map);
+			map.setView(moi._latlng,13);
 			aa()
 			window[nearestX.properties.icon].setIcon(L.AwesomeMarkers.icon({
 					icon: nearestX.properties.icon, 
@@ -492,7 +494,7 @@ L.geoJson(nearest3,{
 		//map.locate({setView: true, maxZoom: 16});
 
 		//
-		map.setView(moi._latlng,13);
+		
 
 function route(latO,longO,latD,longD,point){
 if (typeof trajet != 'undefined'){

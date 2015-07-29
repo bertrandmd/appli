@@ -142,7 +142,7 @@
 </div>
 	<div class='custom-popup' id="map"></div><div id="sidebar">
     <h1>Sidebar 1</h1>
-	<div id="image"> </div>
+	<img src="http://direct.itaro.com.br/blog/wp-content/uploads/2014/07/Food-Trucks-8.jpg" style="width:100%; height:100%;">
 </div>
 <nav id='menu-ui' class='menu-ui'></nav>
 
