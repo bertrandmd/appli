@@ -493,7 +493,9 @@ L.geoJson(nearest3,{
 		map.on('locationerror', onLocationError);
 
 		//map.locate({setView: true, maxZoom: 16});
+$(document).ready(function(){
 		map.locate();
+});
 
 function route(latO,longO,latD,longD,point){
 if (typeof trajet != 'undefined'){
